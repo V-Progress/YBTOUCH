@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#ff0000</color>
+    <color name="blue_btn">#1a9fee</color>
+    <color name="gray">#B0B1B5</color>
+    <color name="gold">#DDB874</color>
+    <color name="light_blue">#33b5e5</color>
+    <color name="calendar_head">#fff</color>
+    <color name="rmb_rate_out">#121212</color>
+    <color name="rmb_rate_in">#060606</color>
+    <color name="countdown_bg">#4B494C</color>
+    <color name="menu_bottom_num">#DB8400</color>
+    <color name="yellow">#ffff00</color>
+    <color name="green">#04e133</color>
+    <color name="shen_green">#17B666</color>
+    <color name="black">#000000</color>
+    <color name="back_color">#bce5f9</color>
+    <color name="status_grey">#212121</color>
+</resources>

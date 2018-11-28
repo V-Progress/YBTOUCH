@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 选中状态 -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <!-- 描边，边框宽度、颜色 -->
+            <stroke android:width="2dp" android:color="#DB8400" />
+        </shape>
+    </item>
+    <!-- 点击状态 -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <!-- 描边，边框宽度、颜色 -->
+            <stroke android:width="2dp" android:color="#DB8400" />
+        </shape>
+    </item>
+    <!-- 普通状态 -->
+    <item>
+        <bitmap android:src="@drawable/input10" />
+    </item>
+</selector>

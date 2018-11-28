@@ -1,0 +1,29 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".business.menuInfo.fragment.RecoveryFragment">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_recovery_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/menu1080_tv_36_dp" />
+
+        <Button
+            android:id="@+id/btn_recovery_fire"
+            android:layout_width="@dimen/btn1080_w_140_dp"
+            android:layout_height="@dimen/btn1080_h_45_dp"
+            android:layout_below="@id/tv_recovery_tip"
+            android:layout_marginTop="@dimen/mar_20_dp"
+            android:background="@drawable/common_btn_sel"
+            android:text="@string/active"
+            android:textSize="@dimen/menu1080_tv_25_dp" />
+
+    </RelativeLayout>
+
+</FrameLayout>

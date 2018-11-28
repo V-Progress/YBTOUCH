@@ -1,0 +1,36 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ideafactory.client.business.menuInfo.fragment.WifiFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ideafactory.client.business.menuInfo.bean.SwitchBtn
+            android:id="@+id/wifi_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:id="@+id/btn_wifi_con"
+            android:layout_width="@dimen/btn1080_w_140_dp"
+            android:layout_height="@dimen/btn1080_w_40_dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/common_btn_sel"
+            android:text="@string/connect_last_wifi"
+            android:textSize="@dimen/menu1080_tv_18_dp" />
+
+
+        <ListView
+            android:id="@+id/lv_wifi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wifi_switch"
+            android:layout_marginTop="@dimen/mar_20_dp" />
+    </RelativeLayout>
+
+
+</FrameLayout>

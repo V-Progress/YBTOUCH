@@ -1,0 +1,113 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.protobuf'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+
+    signingConfigs {
+    }
+
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId "com.ideafactory.client"
+        minSdkVersion 17
+        targetSdkVersion 23
+        versionCode 35
+        versionName "4.4.3"
+        //突破设置的dex的大小在65535的限制
+        multiDexEnabled true
+//        signingConfig signingConfigs.config
+    }
+
+    buildTypes {
+        release {
+            //混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.config
+        }
+        debug {
+//            signingConfig signingConfigs.config
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs', 'libs']
+            java {
+                srcDir 'src/main/java'
+            }
+            proto {
+                srcDir 'src/main/proto'
+            }
+        }
+    }
+
+    //低版本支持httpclient
+    useLibrary 'org.apache.http.legacy'
+    productFlavors {
+    }
+
+    repositories {
+        flatDir { dirs 'libs' }
+    }
+}
+
+protobuf {
+    protoc {
+        artifact = 'com.google.protobuf:protoc:2.5.0'
+    }
+
+    generateProtoTasks {
+        all().each { task ->
+            task.builtins {
+                remove java
+            }
+            task.builtins {
+                java { }
+                cpp { }
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    provided files('lib/classes4.2.jar')
+    //noinspection GradleCompatible
+    //    compile 'com.android.support:support-v4:23.2.1'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    //noinspection GradleCompatible
+    compile 'com.android.support:percent:23.2.1'
+    //    compile 'com.android.support:percent:22.2.0'
+    compile 'org.xutils:xutils:3.3.36'
+    compile files('libs/smdt.jar')
+    compile files('libs/android-support-v7-recyclerview.jar')
+    compile(name: 'xwalk_core_library-17.46.448.10-arm', ext: 'aar')
+    compile 'com.google.protobuf:protobuf-java:2.5.0'
+    compile 'org.greenrobot:greendao:3.2.2'
+    compile project(':facemips')
+}
+//版本升级注意对照数据库版本
+greendao{
+    schemaVersion 4 // 数据库版本号
+    daoPackage  'com.ideafactory.client.greendao'//greenDao 自动生成的代码保存的包名
+    targetGenDir   'src/main/java' //自动生成的代码存储的路径，默认是 build/generated/source/greendao.
+    generateTests false //true的时候自动生成测试单元
+}
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.0'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
+    }
+}

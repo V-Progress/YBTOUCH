@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/call_queue_style"
+    android:weightSum="10"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_call_queue_top"
+        android:text="商店名称"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/red"
+        android:layout_marginLeft="@dimen/call_queue_layout_margin_view"
+        android:layout_marginRight="@dimen/call_queue_layout_margin_view"
+        />
+
+    <TextView
+        android:id="@+id/tv_call_queue_current"
+        android:text="@string/call_queue_message"
+        android:textSize="25sp"
+        android:layout_marginTop="@dimen/call_queue_layout_margin_view"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:textColor="@color/yellow"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/red"
+        android:layout_marginLeft="@dimen/call_queue_layout_margin_view"
+        android:layout_marginRight="@dimen/call_queue_layout_margin_view"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textColor="@color/blue_btn"
+        android:text="@string/call_queue_status"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/red"
+        android:layout_marginLeft="@dimen/call_queue_layout_margin_view"
+        android:layout_marginRight="@dimen/call_queue_layout_margin_view"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/call_queue_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6.4"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+    </android.support.v7.widget.RecyclerView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/red"
+        android:layout_marginLeft="@dimen/call_queue_layout_margin_view"
+        android:layout_marginRight="@dimen/call_queue_layout_margin_view"
+        />
+    <TextView
+        android:id="@+id/call_queue_tv_adver"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:text="云标叫号系统"/>
+
+</LinearLayout>

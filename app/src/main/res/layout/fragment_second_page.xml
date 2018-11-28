@@ -1,0 +1,130 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.ideafactory.client.business.touchQuery.SecondPageFragment">
+
+    <RelativeLayout
+        android:id="@+id/ll_query_second_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_second_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/mar_80_dp"
+            android:layout_marginTop="@dimen/mar_40_dp"
+            android:src="@mipmap/back_btn" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="6">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_second_btn_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/mar_135_dp">
+
+                        <LinearLayout
+                            android:id="@+id/vertical_menu_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/mar_60_dp"
+                            android:layout_marginRight="@dimen/mar_43_dp"
+                            android:orientation="vertical" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ver_line_white" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/mar_165_dp">
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_new_btn_content_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/mar_95_dp"
+                            android:layout_marginLeft="@dimen/mar_80_dp"
+                            android:layout_marginRight="@dimen/mar_80_dp"
+                            android:orientation="vertical" />
+
+
+                        <ImageView
+                            android:id="@+id/iv_query_sec_left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="5dp"
+                            android:src="@mipmap/touch_left" />
+
+                        <ImageView
+                            android:id="@+id/iv_query_sec_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="5dp"
+                            android:src="@mipmap/touch_right" />
+
+                        <TextView
+                            android:id="@+id/tv_pager_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="@dimen/mar_84_dp"
+                            android:layout_marginBottom="@dimen/mar_40_dp"
+                            android:text="页码"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/tv_30_dp" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <AbsoluteLayout
+        android:id="@+id/Second_page_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:dividerPadding="@dimen/activity_horizontal_margin" />
+
+</FrameLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ideafactory.client">
+
+    <permission android:name="android.permission.REBOOT" />
+    <permission android:name="android.permission.SHUTDOWN" />
+    <permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <permission android:name="android.permission.UPDATE_DEVICE_STATS" />
+    <permission android:name="android.permission.INSTALL_LOCATION_PROVIDER" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 亮度权限 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 百度地图显示 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-permission android:name="android.permission.SET_TIME" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <!-- 关闭应用程序的权限 -->
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!--人脸识别-->
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+
+    <application
+        android:name=".heartbeat.APP"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/logo_bluebg"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="2eyH7w9QOfwyC1hOMIQfjIPS5aaN1IxA" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensor"
+            android:theme="@style/Theme.AppStartLoad"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+        </activity>
+        <activity
+            android:name=".business.offline.activity.SwitchLayout"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".business.menuInfo.activity.MenuInfoActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".business.menuInfo.activity.SystemSetActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".business.menuInfo.activity.OffLineActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".business.menuInfo.activity.ServiceSetActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".business.menuInfo.activity.OffLineTwoActivity"
+            android:launchMode="singleTask" />
+
+        <!-- 定时 -->
+        <receiver android:name=".common.timer.layout.TimerReceiver">
+            <intent-filter>
+                <action android:name="com.ssf.receiver.timer" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 开机自动重启 -->
+        <receiver android:name=".heartbeat.BootRestartSeceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听屏幕休眠的广播 -->
+        <receiver android:name=".heartbeat.ScreenStatusReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.SCREEN_OFF" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听网络 -->
+        <receiver android:name=".common.net.ListenNetStateService">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".xmpp.NotificationDetailsActivity"
+            android:label="Notification Details" />
+        <activity
+            android:name=".xmpp.NotificationSettingsActivity"
+            android:label="Notification Settings" />
+
+        <service
+            android:name=".xmpp.NotificationService"
+            android:enabled="true"
+            android:label="NotificationService">
+            <intent-filter>
+                <action android:name="com.ideafactory.client.xmpp.NotificationService" />
+            </intent-filter>
+        </service>
+
+        <!-- 叫号的service -->
+        <service
+            android:name=".business.localnetcall.CallNumBerShow"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.ideafactory.client.business.localnetcall.CallNumBerShow" />
+            </intent-filter>
+        </service>
+
+        <!-- 看门狗service -->
+        <service android:name=".heartbeat.MyProtectService" />
+
+        <!-- 百度定位 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <!-- 广告service -->
+        <service android:name=".business.draw.views.TextViewService" />
+        <!-- 未授权 悬浮窗 -->
+        <service android:name=".business.menuInfo.util.FloatWm" />
+        <!--推送图片服务-->
+        <service android:name=".business.push.ImageService" />
+        <!--推送图片服务-->
+        <service android:name=".business.push.VideoService" />
+
+        <service
+            android:name=".business.hdmiin.CameraCrashService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.rockchip.CameraCrashService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <!-- 恢复出厂设置 -->
+        <receiver android:name=".business.menuInfo.util.MyAdmin">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/my_admin" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".business.unicomscreen.ScreenService" />
+        <service android:name=".business.unicomscreen.UnicomImageService" />
+        <service android:name=".business.unicomscreen.UnicomVideoService" />
+        <service android:name=".business.operationalAds.service.AdsInfoService"/>
+        <receiver android:name=".business.operationalAds.receiver.DownNextAdsInfoReceiver"/>
+        <receiver android:name=".business.operationalAds.receiver.ReplaceAdsInfoReceiver"/>
+        <receiver android:name=".business.operationalAds.receiver.UpLogAdsInfoReceiver"/>
+    </application>
+
+</manifest>

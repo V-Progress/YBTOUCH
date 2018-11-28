@@ -1,0 +1,134 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ideafactory.client.business.menuInfo.fragment.OnOffFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <CheckBox
+            android:id="@+id/cb_onoff_timer"
+            style="@style/off_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mar_20_dp"
+            android:background="@drawable/et_selector"
+            android:checked="true"
+            android:clickable="true"
+            android:text="@string/is_set_power"
+            android:textSize="@dimen/menu1080_tv_36_dp">
+
+            <requestFocus/>
+        </CheckBox>
+
+        <RelativeLayout
+            android:id="@+id/ll_off_onOff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cb_onoff_timer">
+
+            <TextView
+                android:id="@+id/tv_onoff_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/off_time"
+                android:textSize="@dimen/menu1080_tv_36_dp"/>
+
+            <EditText
+                android:id="@+id/et_onoff_OffTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_onoff_position"
+                android:background="@drawable/et_selector"
+                android:cursorVisible="false"
+                android:ems="3"
+                android:focusableInTouchMode="false"
+                android:text="22:00"
+                android:textSize="@dimen/menu1080_tv_36_dp"/>
+
+            <ImageView
+                android:layout_width="@dimen/icon_50_dp"
+                android:layout_height="@dimen/icon_50_dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="@dimen/mar_20_dp"
+                android:gravity="bottom"
+                android:src="@mipmap/on_off"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_onoff_position"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_off_onOff"
+            android:layout_marginBottom="@dimen/mar_20_dp"
+            android:layout_marginTop="@dimen/mar_20_dp"
+            android:background="@color/gray"/>
+
+        <RelativeLayout
+            android:id="@+id/ll_on_onOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_onoff_position">
+
+            <TextView
+                android:id="@+id/tv_onoff_position_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/on_time"
+                android:textSize="@dimen/menu1080_tv_36_dp"/>
+
+            <EditText
+                android:id="@+id/et_onoff_OnTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_onoff_position_two"
+                android:background="@drawable/et_selector"
+                android:cursorVisible="false"
+                android:ems="3"
+                android:focusableInTouchMode="false"
+                android:text="08:00"
+                android:textSize="@dimen/menu1080_tv_36_dp"/>
+
+            <ImageView
+                android:layout_width="@dimen/icon_50_dp"
+                android:layout_height="@dimen/icon_50_dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/mar_20_dp"
+                android:src="@mipmap/on_off"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_onoff_position_two"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_on_onOff"
+            android:layout_marginBottom="@dimen/mar_20_dp"
+            android:layout_marginTop="@dimen/mar_20_dp"
+            android:background="@color/gray"/>
+
+        <LinearLayout
+            android:id="@+id/ll_on_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_onoff_position_two"
+            android:layout_marginTop="@dimen/mar_10_dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/icon_40_dp"
+                android:layout_height="@dimen/icon_40_dp"
+                android:src="@mipmap/hints"/>
+
+            <TextView
+                android:id="@+id/tv_onoff_hints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mar_15_dp"
+                android:textSize="@dimen/menu1080_tv_20_dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:background="@mipmap/touch_query_btn_normal"
+    android:gravity="center"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:id="@+id/ll_tq_bg"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:id="@+id/tq_btn_image_item"
+        />
+    
+    <TextView 
+        android:id="@+id/tq_btn_button_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:text="名字"
+        android:textColor="@color/white"
+        />
+</LinearLayout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".business.menuInfo.activity.SystemSetActivity">
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/rl_sys_header"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#151426"
+        app:layout_heightPercent="8%">
+
+        <ImageView
+            android:id="@+id/iv_sys_set"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/set"
+            app:layout_heightPercent="90%"
+            app:layout_marginLeftPercent="2%"
+            app:layout_widthPercent="3%" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_sys_set"
+            android:text="@string/system_set"
+            android:textColor="#fff"
+            android:textSize="@dimen/menu1080_tv_30_dp"
+            app:layout_marginLeftPercent="2%" />
+
+
+        <ImageView
+            android:id="@+id/btn_sys_return"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:onClick="toFragment"
+            android:src="@mipmap/goback"
+            app:layout_heightPercent="90%"
+            app:layout_marginRightPercent="2%"
+            app:layout_widthPercent="3%" />
+    </android.support.percent.PercentRelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_sys_header"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="@mipmap/sys_left_bg"
+            android:orientation="vertical">
+
+            <com.ideafactory.client.business.menuInfo.bean.SysLeftBtn
+                android:id="@+id/btn_sys_wifi"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sys_left_btn_95_dp"
+                android:layout_gravity="center"
+                android:background="@drawable/sys_lef_btn"
+                android:onClick="toFragment">
+
+                <requestFocus />
+            </com.ideafactory.client.business.menuInfo.bean.SysLeftBtn>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#2DFFFFFF" />
+
+            <com.ideafactory.client.business.menuInfo.bean.SysLeftBtn
+                android:id="@+id/btn_sys_ethernet"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sys_left_btn_95_dp"
+                android:background="@drawable/sys_lef_btn"
+                android:onClick="toFragment" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#2DFFFFFF" />
+
+
+            <com.ideafactory.client.business.menuInfo.bean.SysLeftBtn
+                android:id="@+id/btn_sys_shows"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sys_left_btn_95_dp"
+                android:background="@drawable/sys_lef_btn"
+                android:onClick="toFragment" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#2DFFFFFF" />
+
+
+            <com.ideafactory.client.business.menuInfo.bean.SysLeftBtn
+                android:id="@+id/btn_sys_voice"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sys_left_btn_95_dp"
+                android:background="@drawable/sys_lef_btn"
+                android:onClick="toFragment" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#2DFFFFFF" />
+
+
+            <com.ideafactory.client.business.menuInfo.bean.SysLeftBtn
+                android:id="@+id/btn_sys_onOff"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sys_left_btn_95_dp"
+                android:background="@drawable/sys_lef_btn"
+                android:onClick="toFragment" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#2DFFFFFF" />
+
+
+            <com.ideafactory.client.business.menuInfo.bean.SysLeftBtn
+                android:id="@+id/btn_sys_date"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sys_left_btn_95_dp"
+                android:background="@drawable/sys_lef_btn"
+                android:onClick="toFragment" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#2DFFFFFF" />
+
+
+            <com.ideafactory.client.business.menuInfo.bean.SysLeftBtn
+                android:id="@+id/btn_sys_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sys_left_btn_95_dp"
+                android:background="@drawable/sys_lef_btn"
+                android:onClick="toFragment" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#2DFFFFFF" />
+
+            <com.ideafactory.client.business.menuInfo.bean.SysLeftBtn
+                android:id="@+id/btn_sys_recovery"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sys_left_btn_95_dp"
+                android:background="@drawable/sys_lef_btn"
+                android:onClick="toFragment" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#2DFFFFFF" />
+
+            <com.ideafactory.client.business.menuInfo.bean.SysLeftBtn
+                android:id="@+id/btn_sys_about"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sys_left_btn_95_dp"
+                android:background="@drawable/sys_lef_btn"
+                android:onClick="toFragment" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#2DFFFFFF" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/sys_fragment_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5"
+            android:padding="@dimen/inner_sys_padding" />
+
+    </LinearLayout>
+
+
+</android.support.percent.PercentRelativeLayout>

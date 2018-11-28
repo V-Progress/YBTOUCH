@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_position"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_putong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通图" />
+
+        <Button
+            android:id="@+id/btn_jiaotong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="交通图" />
+
+        <Button
+            android:id="@+id/btn_weixing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="卫星图" />
+
+    </LinearLayout>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/baidu_mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_position"
+        android:clickable="true" />
+
+</RelativeLayout>

@@ -1,0 +1,244 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ideafactory.client.business.menuInfo.fragment.AboutFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--1-->
+        <LinearLayout
+            android:id="@+id/ll_about_model_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_model"
+                android:textSize="@dimen/menu1080_tv_36_dp" />
+
+            <TextView
+                android:id="@+id/tv_about_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/menu1080_tv_36_dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_date_position_one"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_about_model_position"
+            android:layout_marginBottom="@dimen/mar_10_dp"
+            android:layout_marginTop="@dimen/mar_10_dp"
+            android:background="@color/gray" />
+
+        <!--2-->
+        <LinearLayout
+            android:id="@+id/ll_about_version_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_date_position_one">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_version"
+                android:textSize="@dimen/menu1080_tv_36_dp" />
+
+            <TextView
+                android:id="@+id/tv_about_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/menu1080_tv_36_dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_date_position_two"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_about_version_position"
+            android:layout_marginBottom="@dimen/mar_10_dp"
+            android:layout_marginTop="@dimen/mar_10_dp"
+            android:background="@color/gray" />
+
+        <!--4-->
+        <LinearLayout
+            android:id="@+id/ll_about_mi_memory_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_date_position_two">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_available"
+                android:textSize="@dimen/menu1080_tv_36_dp" />
+
+            <TextView
+                android:id="@+id/tv_about_mi_memory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/menu1080_tv_36_dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_date_position_thr"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_about_mi_memory_position"
+            android:layout_marginBottom="@dimen/mar_10_dp"
+            android:layout_marginTop="@dimen/mar_10_dp"
+            android:background="@color/gray" />
+
+        <!--4-->
+        <LinearLayout
+            android:id="@+id/ll_about_display_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_date_position_thr"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_resolution"
+                android:textSize="@dimen/menu1080_tv_36_dp" />
+
+            <TextView
+                android:id="@+id/tv_about_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/menu1080_tv_36_dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_date_position_for"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_about_display_position"
+            android:layout_marginBottom="@dimen/mar_10_dp"
+            android:layout_marginTop="@dimen/mar_10_dp"
+            android:background="@color/gray"
+            android:visibility="gone" />
+
+        <!--5-->
+        <LinearLayout
+            android:id="@+id/ll_kernel_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_date_position_for">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_kernel"
+                android:textSize="@dimen/menu1080_tv_36_dp" />
+
+            <TextView
+                android:id="@+id/tv_kernel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/menu1080_tv_36_dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_date_position_fiv"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_kernel_position"
+            android:layout_marginBottom="@dimen/mar_10_dp"
+            android:layout_marginTop="@dimen/mar_10_dp"
+            android:background="@color/gray" />
+
+        <!--6-->
+        <LinearLayout
+            android:id="@+id/ll_cdKey_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_date_position_fiv">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_serial"
+                android:textSize="@dimen/menu1080_tv_36_dp" />
+
+            <TextView
+                android:id="@+id/tv_cdKey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/menu1080_tv_36_dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_date_position_six"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_cdKey_position"
+            android:layout_marginBottom="@dimen/mar_10_dp"
+            android:layout_marginTop="@dimen/mar_10_dp"
+            android:background="@color/gray" />
+
+        <!--7-->
+        <LinearLayout
+            android:id="@+id/ll_mac_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_date_position_six">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_wlan_mac"
+                android:textSize="@dimen/menu1080_tv_36_dp" />
+
+            <TextView
+                android:id="@+id/tv_mac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/menu1080_tv_36_dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_date_position_sev"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_mac_position"
+            android:layout_marginBottom="@dimen/mar_10_dp"
+            android:layout_marginTop="@dimen/mar_10_dp"
+            android:background="@color/gray" />
+
+        <!--8-->
+        <LinearLayout
+            android:id="@+id/ll_VER_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_date_position_sev">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_dev_version"
+                android:textSize="@dimen/menu1080_tv_36_dp" />
+
+            <TextView
+                android:id="@+id/tv_VER"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/menu1080_tv_36_dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_date_position_eight"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_VER_position"
+            android:layout_marginBottom="@dimen/mar_10_dp"
+            android:layout_marginTop="@dimen/mar_10_dp"
+            android:background="@color/gray" />
+    </RelativeLayout>
+</FrameLayout>

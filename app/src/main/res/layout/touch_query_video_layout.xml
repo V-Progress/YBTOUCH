@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:gravity="center"
+            >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <VideoView
+            android:id="@+id/mVideoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_video"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            android:src="@mipmap/touch_query_video_play"
+            />
+
+        <SeekBar
+            android:visibility="invisible"
+            android:layout_alignBottom="@id/mVideoView"
+            android:focusable="true"
+            android:maxHeight="4.0dip"
+            android:minHeight="4.0dip"
+            android:thumb="@drawable/seekbar_thumb"
+            android:id="@+id/seek_bar"
+            android:progressDrawable="@drawable/video_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="0"
+            android:layout_weight="1"
+            android:indeterminate="false"/>
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/placeholder"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@mipmap/touch_query_vertialbg"/>
+    </FrameLayout>

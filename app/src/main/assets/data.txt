@@ -1,0 +1,158 @@
+[
+    {
+        "center": [
+            {
+                "id": "row1_col1",
+                "content": [
+                    "http://e.hiphotos.baidu.com/image/pic/item/8b13632762d0f703d50f478d0afa513d2697c526.jpg"
+                ],
+                "imageDetail": {
+                    "playTime": "5",
+                    "isAutoPlay": "true"
+                },
+                "container": {
+                    "height": "100%",
+                    "width": "50%",
+                    "left": "0%",
+                    "top": "0%"
+                },
+                "type": "1"
+            },
+            {
+                "id": "row2_1_1",
+                "content": [
+                    "http://e.hiphotos.baidu.com/image/pic/item/b21c8701a18b87d60bff794e050828381f30fd26.jpg"
+                ],
+                "imageDetail": {
+                    "playTime": "5",
+                    "isAutoPlay": "true"
+                },
+                "container": {
+                    "height": "50%",
+                    "width": "50%",
+                    "left": "50%",
+                    "top": "0%"
+                },
+                "type": "1"
+            },
+            {
+                "id": "row2_1_2",
+                "content": [
+                    "http://b.hiphotos.baidu.com/image/pic/item/95eef01f3a292df561a68d44be315c6034a8737d.jpg"
+                ],
+                "imageDetail": {
+                    "playTime": "5",
+                    "isAutoPlay": "true"
+                },
+                "container": {
+                    "height": "50%",
+                    "width": "50%",
+                    "left": "50%",
+                    "top": "50%"
+                },
+                "type": "1"
+            }
+        ],
+        "footer": {
+            "enabled": true,
+            "fontColor": "#FFFF00",
+            "footerText": "热烈庆祝中华人民共和国成立65周年 伟大的祖国生日快乐",
+            "playTime": "0.1",
+            "isPlay": "false",
+            "background": "#330033",
+            "fontFamily": "tahoma",
+            "fontSize": "50px"
+        },
+        "start": "00:00",
+        "header": {
+            "enabled": true,
+            "fontColor": "#99FF66",
+            "timeShow": "1",
+            "address": "230203:齐齐哈尔市",
+            "logoimg": "http://a.hiphotos.baidu.com/image/pic/item/f2deb48f8c5494ee40f1d8482ff5e0fe98257e94.jpg",
+            "background": "#660000",
+            "timeFormat": "yyyy年MM月dd日",
+            "fontFamily": "",
+            "weatherShow": "1",
+            "fontSize": "18px"
+        },
+        "move": [],
+        "end": "00:00"
+    },
+    {
+        "center": [
+            {
+                "id": "row1_col1",
+                "content": [
+                    "http://f.hiphotos.baidu.com/image/pic/item/3b292df5e0fe992509dfbe0136a85edf8cb17194.jpg"
+                ],
+                "imageDetail": {
+                    "playTime": "5",
+                    "isAutoPlay": "true"
+                },
+                "container": {
+                    "height": "100%",
+                    "width": "100%",
+                    "left": "0%",
+                    "top": "0%"
+                },
+                "type": "1"
+            }
+        ],
+        "footer": {
+            "enabled": true,
+            "fontColor": "#000000",
+            "footerText": "得得得",
+            "playTime": "",
+            "isPlay": "true",
+            "background": "#ffffff",
+            "fontFamily": "",
+            "fontSize": "12"
+        },
+        "start": "06:18",
+        "header": {
+            "enabled": true,
+            "fontColor": "#000000",
+            "timeShow": "1",
+            "address": "110108:北京市",
+            "logoimg": "http://localhost:8080/hsdweb/images/logo_1.png",
+            "background": "#ffffff",
+            "timeFormat": "yyyy年MM月dd日",
+            "fontFamily": "",
+            "weatherShow": "1",
+            "fontSize": "12"
+        },
+        "move": [],
+        "end": "07:00"
+    },
+    {
+        "center": [
+            {
+                "id": "row1_col1",
+                "content": [
+                    "http://a.hiphotos.baidu.com/image/pic/item/80cb39dbb6fd526628a5eb45a918972bd50736d1.jpg"
+                ],
+                "imageDetail": {
+                    "playTime": "5",
+                    "isAutoPlay": "true"
+                },
+                "container": {
+                    "height": "100%",
+                    "width": "100%",
+                    "left": "0%",
+                    "top": "0%"
+                },
+                "type": "1"
+            }
+        ],
+        "footer": {
+            "enabled": false
+        },
+        "start": "08:40",
+        "header": {
+            "enabled": false
+        },
+        "move": [],
+        "end": "09:59"
+    }
+]

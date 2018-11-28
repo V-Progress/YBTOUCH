@@ -1,0 +1,73 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ideafactory.client.business.menuInfo.fragment.PwdFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_pwd_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_40_dp"
+                    android:layout_height="@dimen/icon_40_dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/hints" />
+
+                <TextView
+                    android:id="@+id/tv_pwd_hint_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mar_20_dp"
+                    android:textSize="@dimen/menu1080_tv_36_dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_pwd_hint_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mar_50_dp"
+                android:layout_marginTop="@dimen/mar_20_dp"
+                android:textSize="@dimen/menu1080_tv_36_dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_pwd_setting"
+            android:layout_width="@dimen/btn1080_w_140_dp"
+            android:layout_height="@dimen/btn1080_h_45_dp"
+            android:layout_below="@id/ll_pwd_position"
+            android:layout_marginLeft="@dimen/mar_50_dp"
+            android:layout_marginTop="@dimen/mar_20_dp"
+            android:background="@drawable/common_btn_sel"
+            android:text="@string/set_pwd"
+            android:textSize="@dimen/menu1080_tv_20_dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_pwd_reset"
+            android:layout_width="@dimen/btn1080_w_140_dp"
+            android:layout_height="@dimen/btn1080_h_45_dp"
+            android:layout_below="@id/btn_pwd_setting"
+            android:layout_marginLeft="@dimen/mar_50_dp"
+            android:layout_marginTop="@dimen/mar_20_dp"
+            android:background="@drawable/common_btn_sel"
+            android:text="@string/clear_pwd"
+            android:textSize="@dimen/menu1080_tv_20_dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</FrameLayout>

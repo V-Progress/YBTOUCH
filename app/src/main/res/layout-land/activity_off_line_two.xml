@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/fwsz_bj"
+    tools:context="com.ideafactory.client.business.menuInfo.activity.OffLineActivity">
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/perRel_offline_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#151426"
+        app:layout_heightPercent="8%">
+
+        <ImageView
+            android:id="@+id/iv_sys_set"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/plot"
+            app:layout_heightPercent="90%"
+            app:layout_marginLeftPercent="2%"
+            app:layout_widthPercent="3%" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_sys_set"
+            android:text="@string/offline_two_title"
+            android:textColor="#fff"
+            android:textSize="@dimen/menu1080_tv_30_dp"
+            app:layout_marginLeftPercent="2%" />
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:onClick="sysTo"
+            android:src="@mipmap/goback"
+            app:layout_heightPercent="90%"
+            app:layout_marginRightPercent="2%"
+            app:layout_widthPercent="3%" />
+    </android.support.percent.PercentRelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_offline_two_position01"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/offline_two_left"
+        app:layout_heightPercent="60%"
+        app:layout_marginLeftPercent="20%"
+        app:layout_widthPercent="13%" />
+
+    <ImageView
+        android:id="@+id/iv_offline_two_position02"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/iv_offline_two_position01"
+        android:src="@mipmap/offline_two_right"
+        app:layout_heightPercent="60%"
+        app:layout_marginLeftPercent="1%"
+        app:layout_widthPercent="8%" />
+
+    <LinearLayout
+        android:id="@+id/ll_step_position1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_toRightOf="@id/iv_offline_two_position02"
+        android:orientation="horizontal"
+        app:layout_heightPercent="10%"
+        app:layout_marginRightPercent="3%"
+        app:layout_marginTopPercent="29%">
+
+        <TextView
+            android:id="@+id/tv_step_one1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/menu1080_tv_50_dp" />
+
+        <TextView
+            android:id="@+id/tv_step_one2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mar_5_dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/menu1080_tv_30_dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_step_position2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_below="@id/ll_step_position1"
+        android:layout_toRightOf="@id/iv_offline_two_position02"
+        android:orientation="horizontal"
+        app:layout_heightPercent="10%"
+        app:layout_marginRightPercent="3%"
+        app:layout_marginTopPercent="4%">
+
+        <TextView
+            android:id="@+id/tv_step_two1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/menu1080_tv_50_dp" />
+
+        <TextView
+            android:id="@+id/tv_step_two2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mar_5_dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/menu1080_tv_30_dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_step_position3"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_below="@id/ll_step_position2"
+        android:layout_toRightOf="@id/iv_offline_two_position02"
+        android:orientation="horizontal"
+        app:layout_heightPercent="10%"
+        app:layout_marginRightPercent="3%"
+        app:layout_marginTopPercent="4%">
+
+        <TextView
+            android:id="@+id/tv_step_three1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/menu1080_tv_50_dp" />
+
+        <TextView
+            android:id="@+id/tv_step_three2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mar_5_dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/menu1080_tv_30_dp" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_offline_two_import"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_step_position3"
+        android:layout_toRightOf="@id/iv_offline_two_position02"
+        android:background="@drawable/wei_chat_btn"
+        android:text="@string/input_offline_layout"
+        android:textColor="#fff"
+        android:textSize="@dimen/menu1080_tv_25_dp"
+        app:layout_heightPercent="5%"
+        app:layout_marginTopPercent="7%"
+        app:layout_widthPercent="10%" />
+
+</android.support.percent.PercentRelativeLayout>

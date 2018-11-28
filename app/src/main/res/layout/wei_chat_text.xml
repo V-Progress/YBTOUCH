@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <com.ideafactory.client.business.weichat.views.ScrollTextView
+        android:layout_marginLeft="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/weichat_auto_text"
+        android:gravity="center"
+        android:maxLines="4"
+        android:textSize="50sp"
+        android:textColor="@color/white"
+        />
+</RelativeLayout>

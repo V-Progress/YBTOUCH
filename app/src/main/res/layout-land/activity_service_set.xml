@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/fwsz_bj"
+    tools:context="com.ideafactory.client.business.menuInfo.activity.ServiceSetActivity">
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/rl_position"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#151426"
+        app:layout_heightPercent="8%">
+
+        <ImageView
+            android:id="@+id/iv_sys_set"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/network"
+            app:layout_heightPercent="90%"
+            app:layout_marginLeftPercent="2%"
+            app:layout_widthPercent="3%" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_sys_set"
+            android:text="@string/server_set"
+            android:textColor="#fff"
+            android:textSize="@dimen/menu1080_tv_30_dp"
+            app:layout_marginLeftPercent="2%" />
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:onClick="sysTo"
+            android:src="@mipmap/goback"
+            app:layout_heightPercent="90%"
+            app:layout_marginRightPercent="2%"
+            app:layout_widthPercent="3%" />
+    </android.support.percent.PercentRelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_service_logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/logo"
+        app:layout_heightPercent="70%"
+        app:layout_marginLeftPercent="8%"
+        app:layout_widthPercent="20%" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_position"
+        android:layout_toRightOf="@id/iv_service_logo"
+        app:layout_marginLeftPercent="8%"
+        app:layout_marginTopPercent="8%">
+
+        <LinearLayout
+            android:id="@+id/ll_service_position1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_service_deviceNo_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dev_serial_num"
+                android:textSize="@dimen/menu1080_tv_40_dp" />
+
+            <TextView
+                android:id="@+id/tv_service_deviceNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/menu1080_tv_40_dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_service_position2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_service_position1"
+            app:layout_marginTopPercent="4%">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dev_access_num"
+                android:textSize="@dimen/menu1080_tv_40_dp" />
+
+            <TextView
+                android:id="@+id/tv_service_deviceInNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/menu1080_tv_40_dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_service_position3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_service_position2"
+            app:layout_marginTopPercent="4%">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dev_machine_num"
+                android:textSize="@dimen/menu1080_tv_40_dp" />
+
+            <TextView
+                android:id="@+id/tv_service_machineNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/menu1080_tv_40_dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_position_inner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_service_position3"
+            app:layout_marginTopPercent="4%">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/inner_storage"
+                android:textSize="@dimen/menu1080_tv_40_dp" />
+
+            <TextView
+                android:id="@+id/tv_service_inner_capacity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/menu1080_tv_40_dp" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radio_service_storage_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/ll_position_inner"
+            android:orientation="vertical"
+            app:layout_marginRightPercent="2%">
+
+            <RadioButton
+                android:id="@+id/rb_service_inner_check"
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rb_service_outer_check"
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="35dp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/ll_position_outer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_position_inner"
+            app:layout_marginTopPercent="4%">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/outer_storage"
+                android:textSize="@dimen/menu1080_tv_40_dp" />
+
+            <TextView
+                android:id="@+id/tv_service_outer_capacity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/menu1080_tv_40_dp" />
+
+        </LinearLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/ll_service_position5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_position_outer"
+            app:layout_marginTopPercent="4%">
+
+            <TextView
+                android:id="@+id/tv_service_yw_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/business_type"
+                android:textSize="@dimen/menu1080_tv_40_dp" />
+
+            <TextView
+                android:id="@+id/tv_service_firmVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_service_yw_title"
+                android:textSize="@dimen/menu1080_tv_40_dp" />
+
+            <Button
+                android:id="@+id/btn_service_firmVer"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_service_firmVersion"
+                android:background="@drawable/common_btn_sel"
+                android:text="@string/version_update"
+                android:textSize="@dimen/menu1080_tv_20_dp"
+                android:visibility="gone"
+                app:layout_heightPercent="10%"
+                app:layout_marginLeftPercent="5%"
+                app:layout_widthPercent="11%" />
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/ll_service_position6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_service_position5"
+            app:layout_marginTopPercent="4%">
+
+            <TextView
+                android:id="@+id/tv_service_deal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/date_process"
+                android:textSize="@dimen/menu1080_tv_40_dp" />
+
+            <Button
+                android:id="@+id/btn_service_del"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_service_deal"
+                android:background="@drawable/common_btn_sel"
+                android:onClick="dealLayout"
+                android:text="@string/delete_layout"
+                android:textSize="@dimen/menu1080_tv_20_dp"
+                app:layout_heightPercent="13%"
+                app:layout_widthPercent="11%" />
+
+            <Button
+                android:id="@+id/btn_service_clear"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/btn_service_del"
+                android:background="@drawable/common_btn_sel"
+                android:onClick="dealLayout"
+                android:text="@string/clear_disk"
+                android:textSize="@dimen/menu1080_tv_20_dp"
+                app:layout_heightPercent="13%"
+                app:layout_marginLeftPercent="5%"
+                app:layout_widthPercent="11%" />
+        </android.support.percent.PercentRelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_service_position7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_service_position6"
+            app:layout_marginTopPercent="4%">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/server_connect"
+                android:textSize="@dimen/menu1080_tv_40_dp" />
+
+            <com.ideafactory.client.business.menuInfo.bean.SwitchBtn
+                android:id="@+id/switchBtn_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/ll_service_set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_service_position7"
+            app:layout_marginTopPercent="4%">
+
+            <TextView
+                android:id="@+id/tv_yb_bd1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/server_ip"
+                android:textSize="@dimen/menu1080_tv_35_dp" />
+
+            <EditText
+                android:id="@+id/et_service_ip"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_yb_bd1"
+                android:background="@mipmap/et_blue"
+                android:paddingLeft="10dp"
+                android:textSize="@dimen/menu1080_tv_35_dp"
+                app:layout_heightPercent="25%"
+                app:layout_marginLeftPercent="2%"
+                app:layout_widthPercent="23%" />
+
+            <TextView
+                android:id="@+id/tv_yb_bd2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/et_service_ip"
+                android:text="@string/port_num"
+                android:textSize="@dimen/menu1080_tv_35_dp"
+                app:layout_marginLeftPercent="5%" />
+
+            <EditText
+                android:id="@+id/et_service_port"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_yb_bd2"
+                android:background="@mipmap/et_blue"
+                android:paddingLeft="10dp"
+                android:textSize="@dimen/menu1080_tv_35_dp"
+                app:layout_heightPercent="25%"
+                app:layout_marginLeftPercent="2%"
+                app:layout_widthPercent="23%" />
+
+            <Button
+                android:id="@+id/btn_service_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/et_service_port"
+                android:background="@drawable/ok_service_btn"
+                app:layout_marginLeftPercent="5%" />
+        </android.support.percent.PercentRelativeLayout>
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

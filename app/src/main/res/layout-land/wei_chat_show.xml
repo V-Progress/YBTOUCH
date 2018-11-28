@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/weichat_show_pager_land"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_weiChat_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@mipmap/menu_info_logo"
+        app:layout_heightPercent="7%"
+        app:layout_marginLeftPercent="5%"
+        app:layout_marginTopPercent="2%"
+        app:layout_widthPercent="3.7%" />
+
+    <TextView
+        android:id="@+id/tv_weiChat_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_weiChat_icon"
+        android:text="@string/yunbiaowulian"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/menu1080_tv_25_dp"
+        app:layout_marginLeftPercent="1%"
+        app:layout_marginTopPercent="2.5%" />
+
+    <TextView
+        android:id="@+id/tv_weiChat_decNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_weiChat_title"
+        android:layout_toRightOf="@id/iv_weiChat_icon"
+        android:textColor="#fff"
+        android:textSize="@dimen/menu1080_tv_25_dp"
+        app:layout_marginLeftPercent="1%" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_toRightOf="@id/tv_weiChat_title"
+        app:layout_heightPercent="9%"
+        app:layout_marginLeftPercent="2%"
+        app:layout_marginTopPercent="2%"
+        app:layout_widthPercent="5%">
+
+        <ImageView
+            android:id="@+id/yk_download"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@mipmap/yk_download"
+            app:layout_heightPercent="80%"
+            app:layout_widthPercent="80%"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/yk_download"
+            android:textColor="#fff"
+            android:textSize="@dimen/menu1080_tv_15_dp" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/perRel_position"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="6%"
+        app:layout_marginTopPercent="2%"
+        android:layout_alignTop="@+id/tv_weiChat_title"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/btn_weiChat_set"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/is_service_btn"
+            android:text="@string/setting"
+            android:textColor="#fff"
+            android:textSize="@dimen/menu1080_tv_25_dp"
+            app:layout_heightPercent="70%"
+            app:layout_marginRightPercent="5%"
+            app:layout_widthPercent="7%">
+
+            <requestFocus />
+        </Button>
+
+        <ImageView
+            android:id="@+id/iv_weiChat_wifi"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/btn_weiChat_set"
+            android:src="@mipmap/network_unconnected"
+            app:layout_heightPercent="70%"
+            app:layout_marginRightPercent="1%"
+            app:layout_widthPercent="2%" />
+
+        <ImageView
+            android:id="@+id/iv_weiChat_bd"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/iv_weiChat_wifi"
+            android:src="@mipmap/bd_avtive"
+            app:layout_heightPercent="60%"
+            app:layout_marginRightPercent="1%"
+            app:layout_widthPercent="2%" />
+
+        <TextView
+            android:id="@+id/tv_weiChat_temper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/iv_weiChat_bd"
+            android:textColor="#fff"
+            android:textSize="@dimen/menu1080_tv_35_dp"
+            app:layout_marginRightPercent="1%" />
+
+        <ImageView
+            android:id="@+id/iv_weiChat_temper"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_weiChat_temper"
+            app:layout_heightPercent="85%"
+            app:layout_marginRightPercent="0.5%"
+            app:layout_widthPercent="4%" />
+
+        <TextClock
+            android:id="@+id/tv_weiChat_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/iv_weiChat_temper"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/menu1080_tv_35_dp"
+            app:layout_marginRightPercent="0.5%" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/perRel_position"
+        android:text="@string/setting_hint"
+        android:textColor="#fff"
+        android:textSize="@dimen/menu1080_tv_20_dp"
+        app:layout_marginRightPercent="5%" />
+
+    <Button
+        android:id="@+id/btn_weiChat_bind"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/wei_chat_btn"
+        android:text="@string/bind_user"
+        android:textColor="#fff"
+        android:textSize="@dimen/menu1080_tv_20_dp"
+        app:layout_heightPercent="4.95%"
+        app:layout_marginBottomPercent="23%"
+        app:layout_marginLeftPercent="10.8%"
+        app:layout_widthPercent="8.57%" />
+
+    <LinearLayout
+        android:id="@+id/ll_weiChat_pwd_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/edging"
+        android:orientation="vertical"
+        app:layout_marginBottomPercent="13%"
+        app:layout_marginLeftPercent="11%">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/access_code"
+            android:textColor="#fff"
+            android:textSize="@dimen/menu1080_tv_18_dp" />
+
+        <TextView
+            android:id="@+id/tv_weiChat_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textSize="@dimen/menu1080_tv_20_dp" />
+    </LinearLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/btn_weiChat_bind"
+        app:layout_heightPercent="15%"
+        app:layout_marginBottomPercent="13%"
+        app:layout_marginLeftPercent="3%"
+        app:layout_widthPercent="6%">
+
+        <ImageView
+            android:id="@+id/weichat_device_qrCode"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/wei_chat_no_connon"
+            app:layout_heightPercent="70%"
+            app:layout_marginBottomPercent="18%"
+            app:layout_marginLeftPercent="3%"
+            app:layout_widthPercent="100%" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/phone_sweep_bind"
+            android:textColor="#fff"
+            android:textSize="@dimen/menu1080_tv_18_dp" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <Button
+        android:id="@+id/btn_weiChat_default"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/wei_chat_btn"
+        android:text="@string/fast_publish"
+        android:textColor="#fff"
+        android:textSize="@dimen/menu1080_tv_20_dp"
+        app:layout_heightPercent="4.95%"
+        app:layout_marginBottomPercent="20%"
+        app:layout_marginLeftPercent="40.5%"
+        app:layout_widthPercent="8.57%" />
+
+    <Button
+        android:id="@+id/btn_weiChat_offline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/btn_weiChat_default"
+        android:background="@drawable/wei_chat_btn"
+        android:text="@string/set_program"
+        android:textColor="#fff"
+        android:textSize="@dimen/menu1080_tv_20_dp"
+        app:layout_heightPercent="4.95%"
+        app:layout_marginBottomPercent="20%"
+        app:layout_marginLeftPercent="2%"
+        app:layout_widthPercent="8.57%" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        app:layout_heightPercent="6%"
+        app:layout_marginBottomPercent="2%">
+
+        <ImageView
+            android:id="@+id/iv_weiChat_prompt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/prompt"
+            app:layout_heightPercent="90%"
+            app:layout_marginLeftPercent="5%"
+            app:layout_widthPercent="3%" />
+
+        <TextView
+            android:id="@+id/tv_weiChat_register_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_weiChat_prompt"
+            android:text="@string/step_hint"
+            android:textColor="#fff"
+            android:textSize="@dimen/menu1080_tv_35_dp"
+            app:layout_marginLeftPercent="1%" />
+
+        <TextView
+            android:id="@+id/tv_weiChat_contact_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_weiChat_register_status"
+            android:text="@string/contact_us"
+            android:textColor="@color/menu_bottom_num"
+            android:textSize="@dimen/menu1080_tv_27_dp"
+            app:layout_marginLeftPercent="5%" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:layout_heightPercent="20%"
+        app:layout_marginBottomPercent="12%"
+        app:layout_marginRightPercent="16%"
+        app:layout_widthPercent="9%">
+
+        <ImageView
+            android:id="@+id/weichat_show_erimage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@mipmap/wei_chat_no_connon"
+            app:layout_heightPercent="80%"
+            app:layout_widthPercent="100%" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/weixin_code"
+            android:textColor="#fff"
+            android:textSize="@dimen/menu1080_tv_20_dp" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>
+
